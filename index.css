@@ -25,6 +25,8 @@
   --radius-xl: calc(var(--radius) + 4px);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-foreground-2: var(--foreground-2);
+  --color-foreground-3: var(--foreground-3);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
@@ -64,6 +66,8 @@
   --ink: oklch(0.13 0.010 250);               /* base background */
   --background: oklch(0.13 0.010 250);
   --foreground: oklch(0.94 0.008 80);         /* warm white */
+  --foreground-2: oklch(0.82 0.008 80);       /* body secondary — warm pewter */
+  --foreground-3: oklch(0.66 0.012 80);       /* same as --muted-foreground; alias for parity */
 
   --card: oklch(0.17 0.011 250);
   --card-foreground: oklch(0.94 0.008 80);
@@ -91,6 +95,8 @@
 
   --border: oklch(0.94 0.008 80 / 0.08);
   --input: oklch(0.94 0.008 80 / 0.12);
+  --field-border: oklch(0.94 0.008 80 / 0.28);        /* form-field rest */
+  --field-border-hover: oklch(0.94 0.008 80 / 0.45);  /* form-field hover */
   --ring: oklch(0.78 0.115 75);
 
   --sidebar: oklch(0.13 0.010 250);
@@ -176,7 +182,7 @@
   /* Eyebrow / kicker text — small uppercase mono */
   .kicker {
     font-family: var(--font-mono);
-    font-size: 11px;
+    font-size: 0.6875rem;
     font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
@@ -184,11 +190,19 @@
   }
   .kicker-muted {
     font-family: var(--font-mono);
-    font-size: 11px;
+    font-size: 0.6875rem;
     font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--muted-foreground);
+  }
+  .kicker-num {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
   }
 }
 
@@ -199,10 +213,6 @@
     margin-right: auto;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-  }
-  .flex {
-    min-height: 0;
-    min-width: 0;
   }
   @media (min-width: 640px) {
     .container {
@@ -352,6 +362,58 @@
   .btn-gold:active {
     transform: scale(0.97);
   }
+  .btn-gold:focus-visible,
+  .btn-ghost:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px var(--ink-deep),
+      0 0 0 4px var(--gold);
+  }
+  .btn-gold:disabled,
+  .btn-gold[aria-disabled="true"] {
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  .nav-link:focus-visible {
+    outline: none;
+    color: var(--foreground);
+  }
+  .nav-link:focus-visible::after {
+    transform: scaleX(1);
+  }
+  .btn-gold--sm {
+    padding: 0.625rem 1.125rem;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    gap: 0.5rem;
+  }
+  .field-line {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--field-border);
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    color: var(--foreground);
+    transition:
+      border-color 200ms var(--ease-out-cinematic),
+      color 200ms var(--ease-out-cinematic);
+  }
+  .field-line::placeholder {
+    color: var(--muted-foreground);
+  }
+  .field-line:hover {
+    border-bottom-color: var(--field-border-hover);
+  }
+  .field-line:focus,
+  .field-line:focus-visible {
+    outline: none;
+    border-bottom-color: var(--gold);
+  }
+  .field-line:disabled {
+    opacity: 0.5;
+  }
 
   .btn-ghost {
     display: inline-flex;
@@ -403,15 +465,26 @@
   .service-card:hover::before {
     width: 100%;
   }
+  .service-card--lg {
+    padding: 2.5rem;
+  }
+  @media (min-width: 1024px) {
+    .service-card--lg { padding: 3.5rem; }
+  }
 
-  /* Reveal-on-scroll utility (set initial; toggled with .is-visible) */
+  /* Reveal-on-scroll utility — visible by default; .reveal-armed hides
+     it once JS attaches the IntersectionObserver, then .is-visible animates in. */
   .reveal-up {
-    opacity: 0;
-    transform: translate3d(0, 24px, 0);
+    opacity: 1;
+    transform: none;
     transition:
       opacity 700ms var(--ease-out-cinematic),
       transform 700ms var(--ease-out-cinematic);
     will-change: opacity, transform;
+  }
+  .reveal-up.reveal-armed {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
   }
   .reveal-up.is-visible {
     opacity: 1;

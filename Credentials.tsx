@@ -84,9 +84,7 @@ export default function Credentials() {
           className={`max-w-3xl reveal-up ${vH ? "is-visible" : ""}`}
         >
           <div className="flex items-center gap-4 mb-6">
-            <span className="font-mono text-[11px] tracking-[0.3em] uppercase text-[var(--gold)]">
-              &sect; IV
-            </span>
+            <span className="kicker-num">§ IV</span>
             <span className="gold-rule" />
             <span className="kicker-muted">Credentials</span>
           </div>
@@ -141,7 +139,7 @@ function PillarItem({
           {items.map((item) => (
             <li
               key={item}
-              className="flex items-start gap-3 text-base text-[oklch(0.82_0.008_80)] leading-snug"
+              className="flex items-start gap-3 text-base text-foreground-2 leading-snug"
             >
               <span className="text-[var(--gold)] mt-2.5 shrink-0">
                 <span className="block w-2 h-px bg-[var(--gold)]" />

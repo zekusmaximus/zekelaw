@@ -85,9 +85,7 @@ export default function Contact() {
           className={`max-w-4xl reveal-up ${vH ? "is-visible" : ""}`}
         >
           <div className="flex items-center gap-4 mb-6">
-            <span className="font-mono text-[11px] tracking-[0.3em] uppercase text-[var(--gold)]">
-              &sect; V
-            </span>
+            <span className="kicker-num">§ V</span>
             <span className="gold-rule" />
             <span className="kicker-muted">Engagement</span>
           </div>
@@ -97,7 +95,7 @@ export default function Contact() {
               confidential consultation.
             </span>
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-[oklch(0.82_0.008_80)] max-w-3xl">
+          <p className="mt-6 text-lg leading-relaxed text-foreground-2 max-w-3xl">
             All inquiries are reviewed personally by Mr. Zyjeski and treated
             in strict confidence. Initial consultations are available by
             phone or in person at the Connecticut Capitol.
@@ -150,7 +148,7 @@ export default function Contact() {
                   name="interest"
                   value={form.interest}
                   onChange={onChange}
-                  className="w-full bg-transparent border-b border-border py-3 text-base text-foreground focus:border-[var(--gold)] focus:outline-none transition-colors duration-200"
+                  className="field-line"
                 >
                   <option value="" className="bg-[var(--ink)]">
                     Select an area...
@@ -187,7 +185,7 @@ export default function Contact() {
                   value={form.message}
                   onChange={onChange}
                   rows={5}
-                  className="w-full bg-transparent border-b border-border py-3 text-base text-foreground focus:border-[var(--gold)] focus:outline-none transition-colors duration-200 resize-none"
+                  className="field-line resize-none"
                   placeholder="Please share a high-level summary of your matter."
                 />
               </div>
@@ -273,7 +271,7 @@ function Field({
         value={value}
         onChange={onChange}
         required={required}
-        className="w-full bg-transparent border-b border-border py-3 text-base text-foreground focus:border-[var(--gold)] focus:outline-none transition-colors duration-200"
+        className="field-line"
       />
     </div>
   );
