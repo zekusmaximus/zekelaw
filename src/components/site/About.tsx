@@ -4,7 +4,7 @@
  */
 import { useReveal } from "@/hooks/useReveal";
 
-const HEADSHOT = "/manus-storage/zeke-headshot_0f975ecd.png";
+const HEADSHOT = "/zeke-headshot.png";
 
 export default function About() {
   const { ref: r1, isVisible: v1 } = useReveal<HTMLDivElement>();
