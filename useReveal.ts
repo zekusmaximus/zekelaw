@@ -4,7 +4,7 @@
  * - Single observation (no re-trigger flicker)
  * - Honors prefers-reduced-motion
  */
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 
 export function useReveal<T extends HTMLElement = HTMLDivElement>(options?: {
   threshold?: number;
@@ -13,7 +13,7 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(options?: {
   const ref = useRef<T | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!ref.current) return;
     const node = ref.current;
 

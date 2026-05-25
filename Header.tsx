@@ -42,9 +42,9 @@ export default function Header() {
             className="flex items-center gap-3 group"
             aria-label="Law Offices of Jeffrey Zyjeski"
           >
-            <div className="relative w-10 h-10 lg:w-11 lg:h-11 flex items-center justify-center border border-[var(--gold)] transition-colors duration-300 group-hover:bg-[var(--gold)]">
+            <div className="relative w-10 h-10 lg:w-11 lg:h-11 flex items-center justify-center border border-gold transition-colors duration-300 group-hover:bg-gold">
               <span
-                className="font-display text-xl lg:text-2xl text-[var(--gold)] group-hover:text-[var(--ink-deep)] transition-colors duration-300 italic"
+                className="font-display text-xl lg:text-2xl text-gold group-hover:text-ink-deep transition-colors duration-300 italic"
                 style={{ lineHeight: 1 }}
               >
                 Z
@@ -54,11 +54,8 @@ export default function Header() {
               <span className="font-display text-base lg:text-lg tracking-tight">
                 Jeffrey Zyjeski
               </span>
-              <span
-                className="font-mono text-[10px] tracking-[0.18em] uppercase text-muted-foreground"
-                style={{ marginTop: 2 }}
-              >
-                Attorney &mdash; Counsel
+              <span className="kicker-muted" style={{ marginTop: 2 }}>
+                Attorney — Counsel
               </span>
             </div>
           </a>
@@ -82,7 +79,7 @@ export default function Header() {
               href="tel:+18606909273"
               className="flex items-center gap-2 text-[13px] text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
-              <Phone className="w-3.5 h-3.5 text-[var(--gold)]" />
+              <Phone className="w-3.5 h-3.5 text-gold" />
               <span className="font-mono tracking-wider">(860) 690-9273</span>
             </a>
             <a href="#contact" className="btn-gold btn-gold--sm">
@@ -117,7 +114,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className="py-3 font-mono text-sm tracking-wider uppercase text-muted-foreground hover:text-[var(--gold)] transition-colors border-b border-border"
+                className="py-3 font-mono text-sm tracking-wider uppercase text-muted-foreground hover:text-gold transition-colors border-b border-border"
               >
                 {item.label}
               </a>
@@ -128,7 +125,7 @@ export default function Header() {
               href="tel:+18606909273"
               className="flex items-center gap-2 text-sm text-muted-foreground py-2"
             >
-              <Phone className="w-4 h-4 text-[var(--gold)]" />
+              <Phone className="w-4 h-4 text-gold" />
               <span className="font-mono tracking-wider">(860) 690-9273</span>
             </a>
             <a
@@ -137,7 +134,7 @@ export default function Header() {
               className="btn-gold justify-center"
             >
               Schedule Consultation
-              <span aria-hidden="true">&rarr;</span>
+              <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>

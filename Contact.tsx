@@ -8,6 +8,13 @@ import { useState } from "react";
 import { useReveal } from "@/hooks/useReveal";
 import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { toast } from "sonner";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const BG =
   "https://d2xsxph8kpxj0f.cloudfront.net/120221426/MLsbjyUgrfc9mwnDpd5w8d/cta-bg-courthouse-67AcKAbup7EvmBbmX5Y5pc.webp";
@@ -27,9 +34,7 @@ export default function Contact() {
   });
 
   const onChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   };
@@ -64,7 +69,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-24 lg:py-36 bg-[var(--ink-deep)] overflow-hidden"
+      className="section bg-ink-deep overflow-hidden"
     >
       {/* Atmospheric background */}
       <div className="absolute inset-0 pointer-events-none">
@@ -90,10 +95,7 @@ export default function Contact() {
             <span className="kicker-muted">Engagement</span>
           </div>
           <h2 className="display-xl text-foreground">
-            Schedule a{" "}
-            <span className="italic text-[var(--gold)]">
-              confidential consultation.
-            </span>
+            Schedule a <span className="italic">confidential consultation.</span>
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-foreground-2 max-w-3xl">
             All inquiries are reviewed personally by Mr. Zyjeski and treated
@@ -143,40 +145,29 @@ export default function Contact() {
                 <label className="block kicker-muted mb-3" htmlFor="interest">
                   Area of Interest
                 </label>
-                <select
-                  id="interest"
-                  name="interest"
+                <Select
                   value={form.interest}
-                  onChange={onChange}
-                  className="field-line"
+                  onValueChange={(value) =>
+                    setForm((f) => ({ ...f, interest: value }))
+                  }
                 >
-                  <option value="" className="bg-[var(--ink)]">
-                    Select an area...
-                  </option>
-                  <option value="Legislative" className="bg-[var(--ink)]">
-                    Legislative Lobbying
-                  </option>
-                  <option value="Administrative" className="bg-[var(--ink)]">
-                    Administrative & Regulatory
-                  </option>
-                  <option value="Transportation" className="bg-[var(--ink)]">
-                    Transportation Policy
-                  </option>
-                  <option value="Consumer" className="bg-[var(--ink)]">
-                    Consumer Protection
-                  </option>
-                  <option value="Association" className="bg-[var(--ink)]">
-                    Professional Association
-                  </option>
-                  <option value="Other" className="bg-[var(--ink)]">
-                    Other
-                  </option>
-                </select>
+                  <SelectTrigger id="interest" className="field-line">
+                    <SelectValue placeholder="Select an area…" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="Legislative">Legislative Lobbying</SelectItem>
+                    <SelectItem value="Administrative">Administrative & Regulatory</SelectItem>
+                    <SelectItem value="Transportation">Transportation Policy</SelectItem>
+                    <SelectItem value="Consumer">Consumer Protection</SelectItem>
+                    <SelectItem value="Association">Professional Association</SelectItem>
+                    <SelectItem value="Other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
 
               <div className="mt-6">
                 <label className="block kicker-muted mb-3" htmlFor="message">
-                  Brief Description <span className="text-[var(--gold)]">*</span>
+                  Brief Description <span className="text-gold">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -262,7 +253,7 @@ function Field({
   return (
     <div>
       <label className="block kicker-muted mb-3" htmlFor={name}>
-        {label} {required && <span className="text-[var(--gold)]">*</span>}
+        {label} {required && <span className="text-gold">*</span>}
       </label>
       <input
         id={name}
@@ -291,7 +282,7 @@ function ContactItem({
   const inner = (
     <>
       <div className="flex items-center gap-3 mb-2">
-        <Icon className="w-4 h-4 text-[var(--gold)]" strokeWidth={1.5} />
+        <Icon className="w-4 h-4 text-gold" strokeWidth={1.5} />
         <span className="kicker-muted">{label}</span>
       </div>
       <p className="font-display text-2xl lg:text-3xl text-foreground tracking-tight">
@@ -301,20 +292,16 @@ function ContactItem({
   );
   if (href) {
     return (
-      <a
-        href={href}
-        className="block group hover:translate-x-1 transition-transform duration-300"
-        style={{ transitionTimingFunction: "var(--ease-out-cinematic)" }}
-      >
+      <a href={href} className="contact-item group">
         {inner}
-        <span className="block w-12 h-px bg-[var(--gold)] mt-3 group-hover:w-20 transition-all duration-300" />
+        <span className="block w-12 h-px bg-gold mt-3 group-hover:w-20 transition-all duration-300" />
       </a>
     );
   }
   return (
     <div>
       {inner}
-      <span className="block w-12 h-px bg-[var(--gold)] mt-3" />
+      <span className="block w-12 h-px bg-gold mt-3" />
     </div>
   );
 }

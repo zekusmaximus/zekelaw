@@ -97,6 +97,12 @@
   --input: oklch(0.94 0.008 80 / 0.12);
   --field-border: oklch(0.94 0.008 80 / 0.28);        /* form-field rest */
   --field-border-hover: oklch(0.94 0.008 80 / 0.45);  /* form-field hover */
+
+  /* Vertical rhythm */
+  --space-section-y: 6rem;       /* mobile / base */
+  --space-section-y-lg: 9rem;    /* ≥1024px */
+  --space-block-major: 5rem;     /* between major content groups within a section */
+  --space-block-tight: 3rem;     /* between minor content groups */
   --ring: oklch(0.78 0.115 75);
 
   --sidebar: oklch(0.13 0.010 250);
@@ -228,6 +234,19 @@
     }
   }
 
+  /* Standard section wrapper — pairs with the --space-section-y tokens. */
+  .section {
+    padding-top: var(--space-section-y);
+    padding-bottom: var(--space-section-y);
+    position: relative;
+  }
+  @media (min-width: 1024px) {
+    .section {
+      padding-top: var(--space-section-y-lg);
+      padding-bottom: var(--space-section-y-lg);
+    }
+  }
+
   /* Gold hairline rule — used as a section divider and lower-third detail */
   .gold-rule {
     display: inline-block;
@@ -297,7 +316,7 @@
   /* Gold underline draw-in for nav links */
   .nav-link {
     position: relative;
-    color: oklch(0.85 0.008 80);
+    color: var(--foreground-2);
     transition: color 220ms var(--ease-out-cinematic);
     font-size: 13px;
     letter-spacing: 0.04em;
@@ -421,7 +440,7 @@
     gap: 0.75rem;
     padding: 1rem 0;
     background: transparent;
-    color: oklch(0.85 0.008 80);
+    color: var(--foreground-2);
     font-family: var(--font-mono);
     font-size: 12px;
     letter-spacing: 0.18em;
@@ -470,6 +489,38 @@
   }
   @media (min-width: 1024px) {
     .service-card--lg { padding: 3.5rem; }
+  }
+
+  /* Drop-cap on the first letter of a paragraph. Sized in em so it scales
+     with the surrounding text; using ::first-letter keeps the glyph part of
+     the readable content (screen readers read "My career…", not "y career…"). */
+  .dropcap::first-letter {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--gold);
+    float: left;
+    font-size: 3.5em;
+    line-height: 0.85;
+    padding-right: 0.08em;
+    padding-top: 0.05em;
+  }
+
+  /* Contact list item — translate-on-hover affordance, with reduced-motion opt-out */
+  .contact-item {
+    display: block;
+    transition: transform 300ms var(--ease-out-cinematic);
+  }
+  .contact-item:hover {
+    transform: translateX(0.25rem);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .contact-item {
+      transition: none;
+    }
+    .contact-item:hover {
+      transform: none;
+    }
   }
 
   /* Reveal-on-scroll utility — visible by default; .reveal-armed hides

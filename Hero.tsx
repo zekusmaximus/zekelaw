@@ -26,7 +26,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative w-full min-h-[100svh] flex flex-col overflow-hidden bg-[var(--ink-deep)]"
+      className="relative w-full min-h-[100svh] flex flex-col overflow-hidden bg-ink-deep"
     >
       {/* Background photograph */}
       <div className="absolute inset-0">
@@ -42,7 +42,7 @@ export default function Hero() {
         <div className="split-tone-overlay" />
         <div className="film-grain" />
         {/* Vertical gold rule on far left */}
-        <div className="hidden md:block absolute left-6 lg:left-10 top-32 bottom-32 w-px bg-[var(--gold)] opacity-50" />
+        <div className="hidden md:block absolute left-6 lg:left-10 top-32 bottom-32 w-px bg-gold opacity-50" />
       </div>
 
       {/* Top spacer for fixed header */}
@@ -65,7 +65,7 @@ export default function Hero() {
             >
               <span className="gold-rule" />
               <span className="kicker">
-                Government Relations &amp; Administrative Law &mdash; Hartford, CT
+                Government Relations &amp; Administrative Law — Hartford, CT
               </span>
             </div>
 
@@ -95,7 +95,7 @@ export default function Hero() {
                   </span>
                 ))}
               </span>
-              <span className="block italic text-[var(--gold)]">
+              <span className="block italic text-gold">
                 {headlineLine2.map((word, i) => (
                   <span
                     key={`l2-${i}`}
@@ -132,7 +132,7 @@ export default function Hero() {
               }}
             >
               Navigating the intersection of law, regulation, and public
-              policy in Connecticut &mdash; representing established
+              policy in Connecticut — representing established
               corporations, trade associations, and highly regulated
               industries before the General Assembly and Executive Branch.
             </p>
@@ -170,10 +170,10 @@ export default function Hero() {
           transform: mounted ? "translate3d(0,0,0)" : "translate3d(0,16px,0)",
         }}
       >
-        <div className="border-l border-[var(--gold)] pl-5 py-2 max-w-[260px]">
+        <div className="border-l border-gold pl-5 py-2 max-w-[260px]">
           <p className="kicker-muted mb-2">Admitted</p>
           <p className="font-display text-base leading-snug text-foreground">
-            U.S. Supreme Court &middot; Connecticut &middot; Massachusetts
+            U.S. Supreme Court · Connecticut · Massachusetts
           </p>
         </div>
       </div>
@@ -188,7 +188,7 @@ export default function Hero() {
       >
         <span className="kicker-muted text-[10px]">Scroll</span>
         <ChevronDown
-          className="w-4 h-4 text-[var(--gold)] animate-bounce"
+          className="w-4 h-4 text-gold animate-bounce"
           style={{ animationDuration: "2.5s" }}
         />
       </div>

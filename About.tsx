@@ -14,7 +14,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative py-24 lg:py-36 bg-[var(--ink-deep)] overflow-hidden"
+      className="section bg-ink-deep overflow-hidden"
     >
       {/* Subtle ornamental capitol-dome SVG watermark */}
       <DomeWatermark />
@@ -33,7 +33,7 @@ export default function About() {
             </div>
             <h2 className="display-xl max-w-4xl text-foreground">
               Decades of Capitol experience.{" "}
-              <span className="italic text-[var(--gold)]">
+              <span className="italic text-gold">
                 A foundation in the law.
               </span>
             </h2>
@@ -47,8 +47,8 @@ export default function About() {
             }`}
           >
             <div className="relative">
-              {/* Gold offset frame */}
-              <div className="absolute -top-3 -left-3 w-full h-full border border-[var(--gold)] pointer-events-none" />
+              {/* Gold offset frame — extends down-right past the image */}
+              <div className="absolute -bottom-3 -right-3 w-full h-full border border-gold pointer-events-none" />
               <div className="cinematic-vignette relative overflow-hidden bg-[var(--card)]">
                 <img
                   src={HEADSHOT}
@@ -62,7 +62,7 @@ export default function About() {
                 <span className="gold-rule mt-2 shrink-0" />
                 <div>
                   <p className="font-display text-lg text-foreground leading-tight">
-                    Jeffrey &ldquo;Zeke&rdquo; Zyjeski
+                    Jeffrey "Zeke" Zyjeski
                   </p>
                   <p className="kicker-muted mt-1">
                     Attorney &amp; Government Relations Counsel
@@ -81,15 +81,9 @@ export default function About() {
             style={{ transitionDelay: "160ms" }}
           >
             <div className="space-y-6 text-lg leading-relaxed text-foreground-2">
-              <p>
-                <span
-                  className="font-display text-5xl text-[var(--gold)] float-left mr-3 leading-[0.9] mt-1"
-                  aria-hidden="true"
-                >
-                  M
-                </span>
-                y career at the Connecticut Capitol began in 1998 as a staffer
-                for the Legislature&apos;s Judiciary Committee. That foundational
+              <p className="dropcap">
+                My career at the Connecticut Capitol began in 1998 as a staffer
+                for the Legislature's Judiciary Committee. That foundational
                 experience instilled a deep, procedural understanding of how
                 laws are drafted, debated, and enacted in Hartford.
               </p>
@@ -103,7 +97,7 @@ export default function About() {
                 access of a solo practice.
               </p>
               <p>
-                I am not just a government relations professional &mdash; I am
+                I am not just a government relations professional — I am
                 an attorney admitted to practice before the United States
                 Supreme Court. My commitment to the legal profession extends
                 to my leadership roles, having served as{" "}
@@ -117,10 +111,10 @@ export default function About() {
                 .
               </p>
               <p className="font-display italic text-2xl text-foreground leading-snug pt-4 border-t border-border mt-8">
-                &ldquo;This unique combination of legislative mastery and
+                "This unique combination of legislative mastery and
                 elite legal credentials ensures that my clients receive
                 advocacy that is not only politically astute but legally
-                unassailable.&rdquo;
+                unassailable."
               </p>
             </div>
           </div>
