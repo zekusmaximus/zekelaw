@@ -25,11 +25,14 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(options?: {
       return;
     }
 
+    node.classList.add("reveal-armed");
+
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
             setIsVisible(true);
+            node.classList.remove("reveal-armed");
             observer.unobserve(entry.target);
           }
         }

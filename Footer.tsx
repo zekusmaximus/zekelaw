@@ -51,7 +51,7 @@ export default function Footer() {
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    className="text-sm text-[oklch(0.82_0.008_80)] hover:text-[var(--gold)] transition-colors duration-200"
+                    className="text-sm text-foreground-2 hover:text-[var(--gold)] transition-colors duration-200"
                   >
                     {l.label}
                   </a>

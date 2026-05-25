@@ -27,9 +27,7 @@ export default function About() {
             className={`col-span-12 reveal-up ${v1 ? "is-visible" : ""}`}
           >
             <div className="flex items-center gap-4 mb-6">
-              <span className="font-mono text-[11px] tracking-[0.3em] uppercase text-[var(--gold)]">
-                &sect; II
-              </span>
+              <span className="kicker-num">§ II</span>
               <span className="gold-rule" />
               <span className="kicker-muted">About the Practice</span>
             </div>
@@ -82,7 +80,7 @@ export default function About() {
             }`}
             style={{ transitionDelay: "160ms" }}
           >
-            <div className="space-y-6 text-lg leading-relaxed text-[oklch(0.82_0.008_80)]">
+            <div className="space-y-6 text-lg leading-relaxed text-foreground-2">
               <p>
                 <span
                   className="font-display text-5xl text-[var(--gold)] float-left mr-3 leading-[0.9] mt-1"

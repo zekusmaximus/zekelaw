@@ -123,7 +123,7 @@ export default function Hero() {
 
             {/* Sub-headline */}
             <p
-              className="max-w-2xl mt-8 text-lg lg:text-xl text-[oklch(0.82_0.008_80)] leading-relaxed font-light transition-all duration-1000"
+              className="max-w-2xl mt-8 text-lg lg:text-xl text-foreground-2 leading-relaxed font-light transition-all duration-1000"
               style={{
                 transitionDelay: "900ms",
                 transitionTimingFunction: "var(--ease-out-cinematic)",

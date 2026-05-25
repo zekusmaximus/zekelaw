@@ -32,7 +32,7 @@ const primary: PrimaryService[] = [
     index: "01",
     icon: Landmark,
     title: "Direct Legislative Lobbying",
-    body: "The Connecticut General Assembly is a complex ecosystem. We provide sophisticated legislative strategy &mdash; from drafting statutory language and securing committee alliances to neutralizing adverse legislation.",
+    body: "The Connecticut General Assembly is a complex ecosystem. We provide sophisticated legislative strategy — from drafting statutory language and securing committee alliances to neutralizing adverse legislation.",
     bullets: [
       "Statutory drafting & amendment strategy",
       "Committee testimony & coalition building",
@@ -104,9 +104,7 @@ export default function Services() {
           className={`max-w-4xl reveal-up ${vH ? "is-visible" : ""}`}
         >
           <div className="flex items-center gap-4 mb-6">
-            <span className="font-mono text-[11px] tracking-[0.3em] uppercase text-[var(--gold)]">
-              &sect; III
-            </span>
+            <span className="kicker-num">§ III</span>
             <span className="gold-rule" />
             <span className="kicker-muted">Practice Areas</span>
           </div>
@@ -116,7 +114,7 @@ export default function Services() {
               Rigorous legal counsel.
             </span>
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-[oklch(0.82_0.008_80)] max-w-3xl">
+          <p className="mt-6 text-lg leading-relaxed text-foreground-2 max-w-3xl">
             We focus strictly on where the law meets public policy. Because
             clients work directly with a partner-level veteran, our services
             are characterized by high-level strategic advisory and precise
@@ -182,10 +180,10 @@ function PrimaryCard({
   return (
     <div
       ref={ref}
-      className={`service-card !p-10 lg:!p-14 reveal-up ${
+      className={`service-card service-card--lg reveal-up ${
         isVisible ? "is-visible" : ""
       }`}
-      style={{ transitionDelay: `${delay}ms`, background: "var(--ink)" }}
+      style={{ transitionDelay: `${delay}ms` }}
     >
       <div className="flex items-start justify-between mb-8">
         <span className="display-numeral">{index}</span>
@@ -195,10 +193,9 @@ function PrimaryCard({
         />
       </div>
       <h3 className="display-l text-foreground mb-5">{title}</h3>
-      <p
-        className="text-base leading-relaxed text-[oklch(0.82_0.008_80)] mb-8"
-        dangerouslySetInnerHTML={{ __html: body }}
-      />
+      <p className="text-base leading-relaxed text-foreground-2 mb-8">
+        {body}
+      </p>
       <ul className="space-y-3">
         {bullets.map((b) => (
           <li

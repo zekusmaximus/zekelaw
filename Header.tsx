@@ -85,9 +85,9 @@ export default function Header() {
               <Phone className="w-3.5 h-3.5 text-[var(--gold)]" />
               <span className="font-mono tracking-wider">(860) 690-9273</span>
             </a>
-            <a href="#contact" className="btn-gold !py-3 !px-5 !text-[11px]">
+            <a href="#contact" className="btn-gold btn-gold--sm">
               Consult
-              <span aria-hidden="true">&rarr;</span>
+              <span aria-hidden="true">→</span>
             </a>
           </div>
 

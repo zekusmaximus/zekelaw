@@ -23,9 +23,7 @@ export default function Introduction() {
             }`}
           >
             <div className="flex lg:flex-col gap-4 lg:gap-3 items-baseline">
-              <span className="font-mono text-[11px] tracking-[0.3em] uppercase text-[var(--gold)]">
-                &sect; I
-              </span>
+              <span className="kicker-num">§ I</span>
               <span className="kicker-muted">Statement of Practice</span>
             </div>
           </div>
@@ -47,7 +45,7 @@ export default function Introduction() {
             </p>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl">
-              <p className="text-lg leading-relaxed text-[oklch(0.82_0.008_80)]">
+              <p className="text-lg leading-relaxed text-foreground-2">
                 The Law Offices of Jeffrey &ldquo;Zeke&rdquo; Zyjeski offers
                 independent, elite government relations and administrative law
                 counsel. After more than two decades as a key figure at one of
@@ -55,7 +53,7 @@ export default function Introduction() {
                 institutional knowledge of a Capitol heavyweight combined with
                 the un-conflicted, focused attention of a solo practitioner.
               </p>
-              <p className="text-lg leading-relaxed text-[oklch(0.82_0.008_80)]">
+              <p className="text-lg leading-relaxed text-foreground-2">
                 Grounded in high-level legal authority &mdash; including
                 admission to practice before the United States Supreme Court
                 &mdash; we deliver direct, partner-level advocacy for
