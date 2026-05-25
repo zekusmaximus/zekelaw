@@ -1,0 +1,455 @@
+/**
+ * DESIGN PHILOSOPHY: "Hartford After Dark" — Cinematic Power
+ *
+ * Core principles enforced site-wide via these tokens:
+ * - Charcoal-black base (never pure black) with cool-blue undertones
+ * - Burnished gold accent (Roman, never neon)
+ * - High-contrast Didone-adjacent serif (Cormorant Garamond) for display
+ * - Clean grotesque (Inter) for body
+ * - JetBrains Mono for kickers / metadata at small uppercase tracked sizes
+ * - All photographic imagery is graded teal-orange and vignetted
+ *
+ * Do NOT introduce additional accent colors. The single gold token carries
+ * all emphasis. Restraint is the design.
+ */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-ink: var(--ink);
+  --color-ink-deep: var(--ink-deep);
+
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --ease-out-cinematic: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-cinematic: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+:root {
+  /* "Hartford After Dark" — site lives in dark mode by default */
+  --radius: 0.25rem;
+
+  /* Core palette */
+  --ink-deep: oklch(0.10 0.008 250);          /* deepest charcoal */
+  --ink: oklch(0.13 0.010 250);               /* base background */
+  --background: oklch(0.13 0.010 250);
+  --foreground: oklch(0.94 0.008 80);         /* warm white */
+
+  --card: oklch(0.17 0.011 250);
+  --card-foreground: oklch(0.94 0.008 80);
+
+  --popover: oklch(0.17 0.011 250);
+  --popover-foreground: oklch(0.94 0.008 80);
+
+  /* Burnished gold — the only accent */
+  --gold: oklch(0.78 0.115 75);
+  --gold-soft: oklch(0.68 0.085 75);
+  --primary: oklch(0.78 0.115 75);
+  --primary-foreground: oklch(0.13 0.010 250);
+
+  --secondary: oklch(0.22 0.012 250);
+  --secondary-foreground: oklch(0.85 0.008 80);
+
+  --muted: oklch(0.20 0.011 250);
+  --muted-foreground: oklch(0.66 0.012 80);
+
+  --accent: oklch(0.78 0.115 75);
+  --accent-foreground: oklch(0.13 0.010 250);
+
+  --destructive: oklch(0.55 0.18 28);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  --border: oklch(0.94 0.008 80 / 0.08);
+  --input: oklch(0.94 0.008 80 / 0.12);
+  --ring: oklch(0.78 0.115 75);
+
+  --sidebar: oklch(0.13 0.010 250);
+  --sidebar-foreground: oklch(0.94 0.008 80);
+  --sidebar-primary: oklch(0.78 0.115 75);
+  --sidebar-primary-foreground: oklch(0.13 0.010 250);
+  --sidebar-accent: oklch(0.20 0.011 250);
+  --sidebar-accent-foreground: oklch(0.94 0.008 80);
+  --sidebar-border: oklch(0.94 0.008 80 / 0.08);
+  --sidebar-ring: oklch(0.78 0.115 75);
+
+  --chart-1: oklch(0.78 0.115 75);
+  --chart-2: oklch(0.68 0.085 75);
+  --chart-3: oklch(0.55 0.06 80);
+  --chart-4: oklch(0.40 0.04 80);
+  --chart-5: oklch(0.30 0.03 80);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--gold);
+    color: var(--ink-deep);
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+    font-feature-settings: "liga", "dlig", "swsh";
+    letter-spacing: -0.015em;
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Cinematic display headline scale */
+  .display-xxl {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(3rem, 7.5vw, 7.5rem);
+    line-height: 0.96;
+    letter-spacing: -0.02em;
+  }
+  .display-xl {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(2.25rem, 4.5vw, 4.25rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+  }
+  .display-l {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(1.875rem, 3vw, 2.75rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  /* Eyebrow / kicker text — small uppercase mono */
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .kicker-muted {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      max-width: 1400px;
+    }
+  }
+
+  /* Gold hairline rule — used as a section divider and lower-third detail */
+  .gold-rule {
+    display: inline-block;
+    width: 56px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .gold-rule-vertical {
+    display: inline-block;
+    width: 1px;
+    height: 56px;
+    background: var(--gold);
+  }
+
+  /* Cinematic vignette overlay for image containers */
+  .cinematic-vignette {
+    position: relative;
+  }
+  .cinematic-vignette::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse at center,
+      transparent 40%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* Hero photo split-tone overlay */
+  .split-tone-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        180deg,
+        oklch(0.13 0.010 250 / 0.45) 0%,
+        oklch(0.13 0.010 250 / 0.20) 40%,
+        oklch(0.13 0.010 250 / 0.85) 100%
+      );
+    pointer-events: none;
+  }
+
+  /* Subtle film grain over hero — generated via SVG inline noise */
+  .film-grain {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  /* Ken Burns slow drift — used on hero image */
+  @media (prefers-reduced-motion: no-preference) {
+    .ken-burns {
+      animation: kenburns 22s var(--ease-in-out-cinematic) infinite alternate;
+      will-change: transform;
+    }
+  }
+  @keyframes kenburns {
+    0% { transform: scale(1.0) translate3d(0, 0, 0); }
+    100% { transform: scale(1.08) translate3d(-1%, -1.5%, 0); }
+  }
+
+  /* Gold underline draw-in for nav links */
+  .nav-link {
+    position: relative;
+    color: oklch(0.85 0.008 80);
+    transition: color 220ms var(--ease-out-cinematic);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 240ms var(--ease-out-cinematic);
+  }
+  .nav-link:hover {
+    color: var(--foreground);
+  }
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    transform: scaleX(1);
+  }
+
+  /* CTA primary button — gold-bordered, fills with gold on hover */
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.75rem;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition:
+      background 240ms var(--ease-out-cinematic),
+      color 240ms var(--ease-out-cinematic),
+      transform 200ms var(--ease-out-cinematic);
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-gold::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 280ms var(--ease-out-cinematic);
+    z-index: -1;
+  }
+  .btn-gold:hover {
+    color: var(--ink-deep);
+  }
+  .btn-gold:hover::before {
+    transform: scaleX(1);
+  }
+  .btn-gold:active {
+    transform: scale(0.97);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 0;
+    background: transparent;
+    color: oklch(0.85 0.008 80);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-bottom: 1px solid var(--gold);
+    transition:
+      color 220ms var(--ease-out-cinematic),
+      gap 220ms var(--ease-out-cinematic);
+  }
+  .btn-ghost:hover {
+    color: var(--gold);
+    gap: 1rem;
+  }
+
+  /* Service card — numbered, hover reveals gold border */
+  .service-card {
+    position: relative;
+    padding: 2.5rem 2rem 2rem 2rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    transition:
+      border-color 280ms var(--ease-out-cinematic),
+      background 280ms var(--ease-out-cinematic),
+      transform 280ms var(--ease-out-cinematic);
+  }
+  .service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 380ms var(--ease-out-cinematic);
+  }
+  .service-card:hover {
+    border-color: oklch(0.78 0.115 75 / 0.4);
+    background: oklch(0.18 0.011 250);
+  }
+  .service-card:hover::before {
+    width: 100%;
+  }
+
+  /* Reveal-on-scroll utility (set initial; toggled with .is-visible) */
+  .reveal-up {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+    transition:
+      opacity 700ms var(--ease-out-cinematic),
+      transform 700ms var(--ease-out-cinematic);
+    will-change: opacity, transform;
+  }
+  .reveal-up.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-up {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    .ken-burns {
+      animation: none;
+    }
+  }
+
+  /* Decorative oversized numerals for service blocks */
+  .display-numeral {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    line-height: 1;
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  /* Hero ambient gold glow — radial behind headline */
+  .hero-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle at center,
+      oklch(0.78 0.115 75 / 0.18) 0%,
+      transparent 60%
+    );
+    pointer-events: none;
+    filter: blur(20px);
+  }
+}
