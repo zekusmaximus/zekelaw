@@ -21,9 +21,9 @@ const pillars: Pillar[] = [
     label: "Bar Admissions",
     title: "Authority to Practice",
     items: [
-      "United States Supreme Court",
       "State of Connecticut",
       "Commonwealth of Massachusetts",
+      "United States Supreme Court",
     ],
   },
   {
@@ -33,6 +33,7 @@ const pillars: Pillar[] = [
     items: [
       "Secretary, Connecticut Bar Association",
       "Board Member, CT Lawyers Concerned for Lawyers",
+      "Member, Connecticut Association of Lobbyists",
     ],
   },
   {
@@ -40,15 +41,15 @@ const pillars: Pillar[] = [
     label: "Capitol Specialties",
     title: "Committee Depth",
     items: [
-      "Judiciary Committee",
-      "Transportation Committee",
+      "Judiciary & General Law Committees",
+      "Appropriations & Transportation Committees",
       "Administrative rulemaking & hearings",
     ],
   },
   {
     icon: GraduationCap,
     label: "Foundation",
-    title: "Capitol Beginnings",
+    title: "Capitol Experience",
     items: [
       "Staffer, CT Legislature Judiciary Committee (1998)",
       "Two decades at Gaffney, Bennett & Associates",

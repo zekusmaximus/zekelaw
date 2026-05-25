@@ -65,7 +65,7 @@ export default function Hero() {
             >
               <span className="gold-rule" />
               <span className="kicker">
-                Government Relations &amp; Administrative Law — Hartford, CT
+                Government Relations &amp; Administrative Law — West Hartford, CT
               </span>
             </div>
 
