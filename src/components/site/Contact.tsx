@@ -45,25 +45,16 @@ export default function Contact() {
       toast.error("Please complete name, email, and message.");
       return;
     }
-    const body = encodeURIComponent(
-      [
-        `Name: ${form.name}`,
-        `Organization: ${form.organization || "—"}`,
-        `Email: ${form.email}`,
-        `Phone: ${form.phone || "—"}`,
-        `Area of Interest: ${form.interest || "—"}`,
-        ``,
-        `Message:`,
-        form.message,
-      ].join("\n"),
-    );
-    const subject = encodeURIComponent(
-      `Confidential Consultation — ${form.name}${
-        form.organization ? ` (${form.organization})` : ""
-      }`,
-    );
-    window.location.href = `mailto:jeff@zyjeski.com?subject=${subject}&body=${body}`;
-    toast.success("Opening your email to send your inquiry.");
+    // Demo mode: no backend wired up yet. Acknowledge and reset.
+    toast.success("Inquiry received. Mr. Zyjeski will be in touch shortly.");
+    setForm({
+      name: "",
+      organization: "",
+      email: "",
+      phone: "",
+      interest: "",
+      message: "",
+    });
   };
 
   return (
