@@ -75,7 +75,7 @@ export default function Hero() {
                 {headlineLine1.map((word, i) => (
                   <span
                     key={`l1-${i}`}
-                    className="inline-block overflow-hidden mr-[0.25em]"
+                    className="inline-block overflow-hidden mr-[0.25em] pb-[0.18em]"
                     style={{ verticalAlign: "top" }}
                   >
                     <span
@@ -99,7 +99,7 @@ export default function Hero() {
                 {headlineLine2.map((word, i) => (
                   <span
                     key={`l2-${i}`}
-                    className="inline-block overflow-hidden mr-[0.25em]"
+                    className="inline-block overflow-hidden mr-[0.25em] pb-[0.18em]"
                     style={{ verticalAlign: "top" }}
                   >
                     <span
@@ -170,11 +170,13 @@ export default function Hero() {
           transform: mounted ? "translate3d(0,0,0)" : "translate3d(0,16px,0)",
         }}
       >
-        <div className="border-l border-gold pl-5 py-2 max-w-[260px]">
-          <p className="kicker-muted mb-2">Admitted</p>
-          <p className="font-display text-base leading-snug text-foreground">
-            U.S. Supreme Court · Connecticut · Massachusetts
-          </p>
+        <div className="border-l border-gold pl-5 py-2 max-w-[300px]">
+          <p className="kicker-muted mb-3">Admitted</p>
+          <ul className="font-display text-base leading-snug text-foreground space-y-1">
+            <li>Connecticut</li>
+            <li>Massachusetts</li>
+            <li>U.S. Supreme Court</li>
+          </ul>
         </div>
       </div>
 
