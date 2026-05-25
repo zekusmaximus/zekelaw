@@ -91,7 +91,7 @@ export default function Contact() {
           <p className="mt-6 text-lg leading-relaxed text-foreground-2 max-w-3xl">
             All inquiries are reviewed personally by Mr. Zyjeski and treated
             in strict confidence. Initial consultations are available by
-            phone or in person at the Connecticut Capitol.
+            phone or in person at the Legislative Office Building.
           </p>
         </div>
 
@@ -207,7 +207,7 @@ export default function Contact() {
               <ContactItem
                 icon={MapPin}
                 label="Location"
-                value="Hartford, Connecticut"
+                value="West Hartford, Connecticut"
               />
 
               <div className="pt-10 border-t border-border">

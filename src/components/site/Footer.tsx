@@ -87,7 +87,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <p className="kicker-muted mt-6">Hartford, Connecticut</p>
+                <p className="kicker-muted mt-6">West Hartford, Connecticut</p>
               </li>
             </ul>
           </div>
@@ -103,7 +103,7 @@ export default function Footer() {
             of, or access to, this information does not create an
             attorney-client relationship.
           </p>
-          <p className="kicker-muted shrink-0">Hartford · Est. 1998</p>
+          <p className="kicker-muted shrink-0">West Hartford · Est. 1998</p>
         </div>
       </div>
     </footer>
