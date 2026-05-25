@@ -63,7 +63,7 @@ export default function Credentials() {
   return (
     <section
       id="credentials"
-      className="relative py-24 lg:py-36 bg-ink-deep overflow-hidden"
+      className="section bg-ink-deep overflow-hidden"
     >
       {/* Side image — corridor */}
       <div className="absolute inset-y-0 right-0 w-1/2 hidden xl:block">
@@ -88,11 +88,8 @@ export default function Credentials() {
             <span className="gold-rule" />
             <span className="kicker-muted">Credentials</span>
           </div>
-          <h2 className="display-xl text-foreground">
-            Politically astute.{" "}
-            <span className="italic text-gold">
-              Legally unassailable.
-            </span>
+          <h2 className="display-xl italic text-gold">
+            Politically astute. Legally unassailable.
           </h2>
         </div>
 

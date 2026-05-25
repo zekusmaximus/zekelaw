@@ -83,7 +83,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative py-24 lg:py-36 bg-ink overflow-hidden"
+      className="section bg-ink overflow-hidden"
     >
       {/* Background atmospheric image */}
       <div
@@ -109,10 +109,8 @@ export default function Services() {
             <span className="kicker-muted">Practice Areas</span>
           </div>
           <h2 className="display-xl text-foreground">
-            Strategic advocacy.{" "}
-            <span className="italic text-gold">
-              Rigorous legal counsel.
-            </span>
+            <span className="italic text-gold">Strategic advocacy.</span>{" "}
+            Rigorous legal counsel.
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-foreground-2 max-w-3xl">
             We focus strictly on where the law meets public policy. Because

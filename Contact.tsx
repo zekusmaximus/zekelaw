@@ -8,6 +8,13 @@ import { useState } from "react";
 import { useReveal } from "@/hooks/useReveal";
 import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { toast } from "sonner";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const BG =
   "https://d2xsxph8kpxj0f.cloudfront.net/120221426/MLsbjyUgrfc9mwnDpd5w8d/cta-bg-courthouse-67AcKAbup7EvmBbmX5Y5pc.webp";
@@ -27,9 +34,7 @@ export default function Contact() {
   });
 
   const onChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   };
@@ -64,7 +69,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-24 lg:py-36 bg-ink-deep overflow-hidden"
+      className="section bg-ink-deep overflow-hidden"
     >
       {/* Atmospheric background */}
       <div className="absolute inset-0 pointer-events-none">
@@ -90,10 +95,7 @@ export default function Contact() {
             <span className="kicker-muted">Engagement</span>
           </div>
           <h2 className="display-xl text-foreground">
-            Schedule a{" "}
-            <span className="italic text-gold">
-              confidential consultation.
-            </span>
+            Schedule a <span className="italic">confidential consultation.</span>
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-foreground-2 max-w-3xl">
             All inquiries are reviewed personally by Mr. Zyjeski and treated
@@ -143,35 +145,24 @@ export default function Contact() {
                 <label className="block kicker-muted mb-3" htmlFor="interest">
                   Area of Interest
                 </label>
-                <select
-                  id="interest"
-                  name="interest"
+                <Select
                   value={form.interest}
-                  onChange={onChange}
-                  className="field-line"
+                  onValueChange={(value) =>
+                    setForm((f) => ({ ...f, interest: value }))
+                  }
                 >
-                  <option value="" className="bg-ink">
-                    Select an area...
-                  </option>
-                  <option value="Legislative" className="bg-ink">
-                    Legislative Lobbying
-                  </option>
-                  <option value="Administrative" className="bg-ink">
-                    Administrative & Regulatory
-                  </option>
-                  <option value="Transportation" className="bg-ink">
-                    Transportation Policy
-                  </option>
-                  <option value="Consumer" className="bg-ink">
-                    Consumer Protection
-                  </option>
-                  <option value="Association" className="bg-ink">
-                    Professional Association
-                  </option>
-                  <option value="Other" className="bg-ink">
-                    Other
-                  </option>
-                </select>
+                  <SelectTrigger id="interest" className="field-line">
+                    <SelectValue placeholder="Select an area…" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="Legislative">Legislative Lobbying</SelectItem>
+                    <SelectItem value="Administrative">Administrative & Regulatory</SelectItem>
+                    <SelectItem value="Transportation">Transportation Policy</SelectItem>
+                    <SelectItem value="Consumer">Consumer Protection</SelectItem>
+                    <SelectItem value="Association">Professional Association</SelectItem>
+                    <SelectItem value="Other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
 
               <div className="mt-6">

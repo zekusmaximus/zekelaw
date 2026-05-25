@@ -97,6 +97,12 @@
   --input: oklch(0.94 0.008 80 / 0.12);
   --field-border: oklch(0.94 0.008 80 / 0.28);        /* form-field rest */
   --field-border-hover: oklch(0.94 0.008 80 / 0.45);  /* form-field hover */
+
+  /* Vertical rhythm */
+  --space-section-y: 6rem;       /* mobile / base */
+  --space-section-y-lg: 9rem;    /* ≥1024px */
+  --space-block-major: 5rem;     /* between major content groups within a section */
+  --space-block-tight: 3rem;     /* between minor content groups */
   --ring: oklch(0.78 0.115 75);
 
   --sidebar: oklch(0.13 0.010 250);
@@ -225,6 +231,19 @@
       padding-left: 3rem;
       padding-right: 3rem;
       max-width: 1400px;
+    }
+  }
+
+  /* Standard section wrapper — pairs with the --space-section-y tokens. */
+  .section {
+    padding-top: var(--space-section-y);
+    padding-bottom: var(--space-section-y);
+    position: relative;
+  }
+  @media (min-width: 1024px) {
+    .section {
+      padding-top: var(--space-section-y-lg);
+      padding-bottom: var(--space-section-y-lg);
     }
   }
 
@@ -470,6 +489,21 @@
   }
   @media (min-width: 1024px) {
     .service-card--lg { padding: 3.5rem; }
+  }
+
+  /* Drop-cap on the first letter of a paragraph. Sized in em so it scales
+     with the surrounding text; using ::first-letter keeps the glyph part of
+     the readable content (screen readers read "My career…", not "y career…"). */
+  .dropcap::first-letter {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--gold);
+    float: left;
+    font-size: 3.5em;
+    line-height: 0.85;
+    padding-right: 0.08em;
+    padding-top: 0.05em;
   }
 
   /* Contact list item — translate-on-hover affordance, with reduced-motion opt-out */

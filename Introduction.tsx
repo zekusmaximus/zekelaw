@@ -9,7 +9,7 @@ export default function Introduction() {
   const { ref: r2, isVisible: v2 } = useReveal<HTMLDivElement>();
 
   return (
-    <section className="relative py-24 lg:py-36 bg-ink">
+    <section className="section bg-ink">
       {/* Top hairline rule */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--gold)]/40 to-transparent" />
 

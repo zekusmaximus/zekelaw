@@ -14,7 +14,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative py-24 lg:py-36 bg-ink-deep overflow-hidden"
+      className="section bg-ink-deep overflow-hidden"
     >
       {/* Subtle ornamental capitol-dome SVG watermark */}
       <DomeWatermark />
@@ -47,8 +47,8 @@ export default function About() {
             }`}
           >
             <div className="relative">
-              {/* Gold offset frame */}
-              <div className="absolute -top-3 -left-3 w-full h-full border border-gold pointer-events-none" />
+              {/* Gold offset frame — extends down-right past the image */}
+              <div className="absolute -bottom-3 -right-3 w-full h-full border border-gold pointer-events-none" />
               <div className="cinematic-vignette relative overflow-hidden bg-[var(--card)]">
                 <img
                   src={HEADSHOT}
@@ -81,14 +81,8 @@ export default function About() {
             style={{ transitionDelay: "160ms" }}
           >
             <div className="space-y-6 text-lg leading-relaxed text-foreground-2">
-              <p>
-                <span
-                  className="font-display text-5xl text-gold float-left mr-3 leading-[0.9] mt-1"
-                  aria-hidden="true"
-                >
-                  M
-                </span>
-                y career at the Connecticut Capitol began in 1998 as a staffer
+              <p className="dropcap">
+                My career at the Connecticut Capitol began in 1998 as a staffer
                 for the Legislature's Judiciary Committee. That foundational
                 experience instilled a deep, procedural understanding of how
                 laws are drafted, debated, and enacted in Hartford.
