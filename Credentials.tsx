@@ -63,7 +63,7 @@ export default function Credentials() {
   return (
     <section
       id="credentials"
-      className="relative py-24 lg:py-36 bg-[var(--ink-deep)] overflow-hidden"
+      className="relative py-24 lg:py-36 bg-ink-deep overflow-hidden"
     >
       {/* Side image — corridor */}
       <div className="absolute inset-y-0 right-0 w-1/2 hidden xl:block">
@@ -90,7 +90,7 @@ export default function Credentials() {
           </div>
           <h2 className="display-xl text-foreground">
             Politically astute.{" "}
-            <span className="italic text-[var(--gold)]">
+            <span className="italic text-gold">
               Legally unassailable.
             </span>
           </h2>
@@ -123,8 +123,8 @@ function PillarItem({
     >
       {/* Numeric / icon column */}
       <div className="shrink-0 flex flex-col items-center gap-3 pt-1">
-        <div className="w-12 h-12 border border-[var(--gold)] flex items-center justify-center">
-          <Icon className="w-5 h-5 text-[var(--gold)]" strokeWidth={1.25} />
+        <div className="w-12 h-12 border border-gold flex items-center justify-center">
+          <Icon className="w-5 h-5 text-gold" strokeWidth={1.25} />
         </div>
         <div className="w-px flex-1 bg-border" />
       </div>
@@ -141,8 +141,8 @@ function PillarItem({
               key={item}
               className="flex items-start gap-3 text-base text-foreground-2 leading-snug"
             >
-              <span className="text-[var(--gold)] mt-2.5 shrink-0">
-                <span className="block w-2 h-px bg-[var(--gold)]" />
+              <span className="text-gold mt-2.5 shrink-0">
+                <span className="block w-2 h-px bg-gold" />
               </span>
               <span>{item}</span>
             </li>

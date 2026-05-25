@@ -83,7 +83,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative py-24 lg:py-36 bg-[var(--ink)] overflow-hidden"
+      className="relative py-24 lg:py-36 bg-ink overflow-hidden"
     >
       {/* Background atmospheric image */}
       <div
@@ -110,7 +110,7 @@ export default function Services() {
           </div>
           <h2 className="display-xl text-foreground">
             Strategic advocacy.{" "}
-            <span className="italic text-[var(--gold)]">
+            <span className="italic text-gold">
               Rigorous legal counsel.
             </span>
           </h2>
@@ -153,7 +153,7 @@ export default function Services() {
             <p className="kicker mb-4">Engagement</p>
             <p className="display-l text-foreground">
               Discuss your regulatory needs in a{" "}
-              <span className="italic text-[var(--gold)]">
+              <span className="italic text-gold">
                 confidential consultation.
               </span>
             </p>
@@ -188,7 +188,7 @@ function PrimaryCard({
       <div className="flex items-start justify-between mb-8">
         <span className="display-numeral">{index}</span>
         <Icon
-          className="w-6 h-6 text-[var(--gold)] mt-3"
+          className="w-6 h-6 text-gold mt-3"
           strokeWidth={1.25}
         />
       </div>
@@ -202,8 +202,8 @@ function PrimaryCard({
             key={b}
             className="flex items-start gap-3 text-sm text-muted-foreground"
           >
-            <span className="text-[var(--gold)] mt-1.5 shrink-0">
-              <span className="block w-3 h-px bg-[var(--gold)]" />
+            <span className="text-gold mt-1.5 shrink-0">
+              <span className="block w-3 h-px bg-gold" />
             </span>
             <span>{b}</span>
           </li>
@@ -227,7 +227,7 @@ function IndustryCard({
       style={{ transitionDelay: `${delay}ms` }}
     >
       <Icon
-        className="w-7 h-7 text-[var(--gold)] mb-6"
+        className="w-7 h-7 text-gold mb-6"
         strokeWidth={1.25}
       />
       <h4 className="font-display text-2xl text-foreground mb-3 leading-tight">

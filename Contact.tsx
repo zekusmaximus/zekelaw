@@ -64,7 +64,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-24 lg:py-36 bg-[var(--ink-deep)] overflow-hidden"
+      className="relative py-24 lg:py-36 bg-ink-deep overflow-hidden"
     >
       {/* Atmospheric background */}
       <div className="absolute inset-0 pointer-events-none">
@@ -91,7 +91,7 @@ export default function Contact() {
           </div>
           <h2 className="display-xl text-foreground">
             Schedule a{" "}
-            <span className="italic text-[var(--gold)]">
+            <span className="italic text-gold">
               confidential consultation.
             </span>
           </h2>
@@ -150,25 +150,25 @@ export default function Contact() {
                   onChange={onChange}
                   className="field-line"
                 >
-                  <option value="" className="bg-[var(--ink)]">
+                  <option value="" className="bg-ink">
                     Select an area...
                   </option>
-                  <option value="Legislative" className="bg-[var(--ink)]">
+                  <option value="Legislative" className="bg-ink">
                     Legislative Lobbying
                   </option>
-                  <option value="Administrative" className="bg-[var(--ink)]">
+                  <option value="Administrative" className="bg-ink">
                     Administrative & Regulatory
                   </option>
-                  <option value="Transportation" className="bg-[var(--ink)]">
+                  <option value="Transportation" className="bg-ink">
                     Transportation Policy
                   </option>
-                  <option value="Consumer" className="bg-[var(--ink)]">
+                  <option value="Consumer" className="bg-ink">
                     Consumer Protection
                   </option>
-                  <option value="Association" className="bg-[var(--ink)]">
+                  <option value="Association" className="bg-ink">
                     Professional Association
                   </option>
-                  <option value="Other" className="bg-[var(--ink)]">
+                  <option value="Other" className="bg-ink">
                     Other
                   </option>
                 </select>
@@ -176,7 +176,7 @@ export default function Contact() {
 
               <div className="mt-6">
                 <label className="block kicker-muted mb-3" htmlFor="message">
-                  Brief Description <span className="text-[var(--gold)]">*</span>
+                  Brief Description <span className="text-gold">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -262,7 +262,7 @@ function Field({
   return (
     <div>
       <label className="block kicker-muted mb-3" htmlFor={name}>
-        {label} {required && <span className="text-[var(--gold)]">*</span>}
+        {label} {required && <span className="text-gold">*</span>}
       </label>
       <input
         id={name}
@@ -291,7 +291,7 @@ function ContactItem({
   const inner = (
     <>
       <div className="flex items-center gap-3 mb-2">
-        <Icon className="w-4 h-4 text-[var(--gold)]" strokeWidth={1.5} />
+        <Icon className="w-4 h-4 text-gold" strokeWidth={1.5} />
         <span className="kicker-muted">{label}</span>
       </div>
       <p className="font-display text-2xl lg:text-3xl text-foreground tracking-tight">
@@ -301,20 +301,16 @@ function ContactItem({
   );
   if (href) {
     return (
-      <a
-        href={href}
-        className="block group hover:translate-x-1 transition-transform duration-300"
-        style={{ transitionTimingFunction: "var(--ease-out-cinematic)" }}
-      >
+      <a href={href} className="contact-item group">
         {inner}
-        <span className="block w-12 h-px bg-[var(--gold)] mt-3 group-hover:w-20 transition-all duration-300" />
+        <span className="block w-12 h-px bg-gold mt-3 group-hover:w-20 transition-all duration-300" />
       </a>
     );
   }
   return (
     <div>
       {inner}
-      <span className="block w-12 h-px bg-[var(--gold)] mt-3" />
+      <span className="block w-12 h-px bg-gold mt-3" />
     </div>
   );
 }
