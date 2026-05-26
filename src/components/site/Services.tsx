@@ -1,6 +1,6 @@
 /**
- * Services — "Strategic Advocacy. Rigorous Legal Counsel."
- * Two large primary service blocks above three industry-specialty cards.
+ * Services — practice areas (legislative advocacy + regulatory/agency affairs)
+ * above three areas-of-focus cards.
  * Numbered with display-italic numerals (01, 02) and bordered with hairline gold.
  */
 import { useReveal } from "@/hooks/useReveal";
@@ -8,7 +8,7 @@ import {
   Landmark,
   ScrollText,
   Truck,
-  ShieldCheck,
+  Scale,
   Building2,
   ArrowRight,
 } from "lucide-react";
@@ -31,24 +31,24 @@ const primary: PrimaryService[] = [
     id: "legislative",
     index: "01",
     icon: Landmark,
-    title: "Direct Legislative Lobbying",
-    body: "The Connecticut General Assembly is a complex ecosystem. We provide sophisticated legislative strategy — from drafting statutory language and securing committee alliances to neutralizing adverse legislation.",
+    title: "Direct Legislative Advocacy",
+    body: "The Connecticut General Assembly is a complex ecosystem. I provide sophisticated legislative strategy, from drafting statutory language and building committee alliances to neutralizing adverse legislation before it gains momentum.",
     bullets: [
-      "Statutory drafting & amendment strategy",
-      "Committee testimony & coalition building",
-      "Specialized depth before Judiciary and Transportation Committees",
+      "Statutory drafting and amendment strategy",
+      "Committee testimony and coalition building",
+      "Particular depth before the Judiciary and Transportation Committees",
     ],
   },
   {
-    id: "administrative",
+    id: "regulatory",
     index: "02",
     icon: ScrollText,
-    title: "Administrative Law & Regulatory Counsel",
-    body: "For highly regulated industries, the Executive Branch and state agencies are just as critical as the Legislature. We represent clients facing regulatory scrutiny and intervene in agency rulemaking processes.",
+    title: "Regulatory & Agency Affairs",
+    body: "For regulated industries, the executive branch and state agencies matter as much as the Legislature. I help clients engage agencies, shape rulemaking, and stay ahead of regulatory developments before they harden into binding rules.",
     bullets: [
-      "Agency rulemaking interventions",
-      "Formal representation in administrative hearings",
-      "Regulatory scrutiny & enforcement defense",
+      "Rulemaking advocacy and public-comment strategy",
+      "Agency engagement and executive-branch relations",
+      "Regulatory monitoring and early-warning analysis",
     ],
   },
 ];
@@ -61,19 +61,19 @@ interface IndustrySpec {
 
 const industries: IndustrySpec[] = [
   {
-    icon: Truck,
-    title: "Transportation Policy",
-    body: "Navigating state regulations, infrastructure funding, and highway user fees for logistics and transportation firms.",
+    icon: Scale,
+    title: "Civil Justice & the Courts",
+    body: "Counsel-grade fluency in the issues that move through the Judiciary Committee: civil justice and liability policy, court rules, and the litigation environment. A depth few non-lawyer advocates can match.",
   },
   {
-    icon: ShieldCheck,
-    title: "Consumer Protection",
-    body: "Strategic guidance for consumer brands facing regulatory oversight in Connecticut.",
+    icon: Truck,
+    title: "Transportation & Infrastructure",
+    body: "Strategy on state transportation regulation, infrastructure and bonding, highway user fees, and the policy questions facing logistics, mobility, and transportation firms.",
   },
   {
     icon: Building2,
-    title: "Professional Associations",
-    body: "Advocacy and counsel for legal, medical, and trade associations regarding licensure, scope of practice, and industry standards.",
+    title: "Professional & Trade Associations",
+    body: "Advocacy for legal, medical, and trade associations on licensure, scope of practice, and the standards that define how their members operate.",
   },
 ];
 
@@ -109,14 +109,15 @@ export default function Services() {
             <span className="kicker-muted">Practice Areas</span>
           </div>
           <h2 className="display-xl text-foreground">
-            <span className="italic text-gold">Strategic advocacy.</span>{" "}
-            Rigorous legal counsel.
+            <span className="italic text-gold">Relationships first.</span>{" "}
+            Statutory craft second. Both, every time.
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-foreground-2 max-w-3xl">
-            We focus strictly on where the law meets public policy. Because
-            clients work directly with a partner-level veteran, our services
-            are characterized by high-level strategic advisory and precise
-            execution.
+            I work where the law meets public policy in Connecticut.
+            Because clients work directly with me — not a team, not a
+            handoff — the work is characterized by personal stewardship,
+            sound strategy, and the precision of statutory language
+            written by the lawyer who's also at the table.
           </p>
         </div>
 
@@ -130,7 +131,7 @@ export default function Services() {
         {/* Industry specialties — three smaller cards */}
         <div className="mt-24">
           <div className="flex items-center gap-4 mb-8">
-            <span className="kicker">Specialized Industry Expertise</span>
+            <span className="kicker">Areas of Focus</span>
             <span className="gold-rule flex-1 max-w-[140px]" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -140,8 +141,8 @@ export default function Services() {
           </div>
 
           <p className="mt-12 text-sm text-muted-foreground italic max-w-2xl font-display">
-            Additional counsel available in Criminal Law and Landlord/Tenant
-            matters.
+            Adjacent matters considered case by case. If your issue touches
+            Hartford, it's worth a conversation.
           </p>
         </div>
 
@@ -150,14 +151,14 @@ export default function Services() {
           <div className="max-w-2xl">
             <p className="kicker mb-4">Engagement</p>
             <p className="display-l text-foreground">
-              Discuss your regulatory needs in a{" "}
-              <span className="italic text-gold">
-                confidential consultation.
-              </span>
+              When a legislative or regulatory threat is really a legal
+              problem in disguise, you want it in front of someone who can
+              see both at once.{" "}
+              <span className="italic text-gold">Let's talk.</span>
             </p>
           </div>
           <a href="#contact" className="btn-gold shrink-0 self-start md:self-end">
-            Begin the Conversation
+            Start the Conversation
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

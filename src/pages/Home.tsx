@@ -1,5 +1,5 @@
 /**
- * Home — single-page landing for the Law Offices of Jeffrey "Zeke" Zyjeski.
+ * Home — single-page landing for [FIRM NAME].
  * Design: "Hartford After Dark" cinematic dark + gold.
  * All section components live under client/src/components/site/.
  */
