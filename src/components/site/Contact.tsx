@@ -1,6 +1,7 @@
 /**
- * Contact — confidential consultation form + direct contact info.
- * Architectural marble/brass background image evokes Supreme Court authority.
+ * Contact — confidential inquiry form + direct contact info.
+ * Background reuses the Capitol-at-dusk image to keep the section on the
+ * legislative-building theme.
  * Form submission opens user's email client with a pre-populated message
  * (no backend; web-static project).
  */
@@ -17,7 +18,7 @@ import {
 } from "@/components/ui/select";
 
 const BG =
-  "https://d2xsxph8kpxj0f.cloudfront.net/120221426/MLsbjyUgrfc9mwnDpd5w8d/cta-bg-courthouse-67AcKAbup7EvmBbmX5Y5pc.webp";
+  "https://d2xsxph8kpxj0f.cloudfront.net/120221426/MLsbjyUgrfc9mwnDpd5w8d/hero-capitol-dusk-8gbAPivaDp67KXrgyuB374.png";
 
 export default function Contact() {
   const { ref: rH, isVisible: vH } = useReveal<HTMLDivElement>();
@@ -46,7 +47,7 @@ export default function Contact() {
       return;
     }
     // Demo mode: no backend wired up yet. Acknowledge and reset.
-    toast.success("Inquiry received. Mr. Zyjeski will be in touch shortly.");
+    toast.success("Inquiry received. I'll be in touch shortly.");
     setForm({
       name: "",
       organization: "",
@@ -86,12 +87,14 @@ export default function Contact() {
             <span className="kicker-muted">Engagement</span>
           </div>
           <h2 className="display-xl text-foreground">
-            Schedule a <span className="italic">confidential consultation.</span>
+            Let's <span className="italic">talk.</span>
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-foreground-2 max-w-3xl">
-            All inquiries are reviewed personally by Mr. Zyjeski and treated
-            in strict confidence. Initial consultations are available by
-            phone or in person at the Legislative Office Building.
+            When a legislative or regulatory threat is really a legal
+            problem in disguise, you want it in front of someone who can
+            see both at once. I review every inquiry personally and treat
+            it in strict confidence. Initial conversations happen by phone
+            or in person at the Legislative Office Building.
           </p>
         </div>
 
@@ -146,11 +149,11 @@ export default function Contact() {
                     <SelectValue placeholder="Select an area…" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="Legislative">Legislative Lobbying</SelectItem>
-                    <SelectItem value="Administrative">Administrative & Regulatory</SelectItem>
-                    <SelectItem value="Transportation">Transportation Policy</SelectItem>
-                    <SelectItem value="Consumer">Consumer Protection</SelectItem>
-                    <SelectItem value="Association">Professional Association</SelectItem>
+                    <SelectItem value="Legislative">Direct Legislative Advocacy</SelectItem>
+                    <SelectItem value="Regulatory">Regulatory & Agency Affairs</SelectItem>
+                    <SelectItem value="CivilJustice">Civil Justice & the Courts</SelectItem>
+                    <SelectItem value="Transportation">Transportation & Infrastructure</SelectItem>
+                    <SelectItem value="Association">Professional or Trade Association</SelectItem>
                     <SelectItem value="Other">Other</SelectItem>
                   </SelectContent>
                 </Select>
@@ -174,11 +177,11 @@ export default function Contact() {
 
               <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-6 justify-between">
                 <p className="text-xs text-muted-foreground max-w-xs leading-relaxed">
-                  By sending this inquiry you acknowledge no attorney-client
-                  relationship is formed until a written engagement is signed.
+                  Sending this inquiry does not create an engagement. Any
+                  engagement begins only on a signed written agreement.
                 </p>
                 <button type="submit" className="btn-gold shrink-0">
-                  Send Confidential Inquiry
+                  Send Inquiry
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
@@ -213,9 +216,9 @@ export default function Contact() {
               <div className="pt-10 border-t border-border">
                 <p className="kicker mb-4">Confidentiality</p>
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  Communications are reviewed by Mr. Zyjeski personally. We do
-                  not discuss prospective representation matters with third
-                  parties or staff intermediaries.
+                  I review every inquiry myself. Prospective engagement
+                  matters are not discussed with third parties or staff
+                  intermediaries.
                 </p>
               </div>
             </div>

@@ -32,9 +32,9 @@ export default function About() {
               <span className="kicker-muted">About the Practice</span>
             </div>
             <h2 className="display-xl max-w-4xl text-foreground">
-              Decades of Capitol experience.{" "}
+              Twenty-five years at the Capitol.{" "}
               <span className="italic text-gold">
-                A foundation in the law.
+                A lawyer at the keyboard.
               </span>
             </h2>
           </div>
@@ -65,7 +65,7 @@ export default function About() {
                     Jeffrey "Zeke" Zyjeski
                   </p>
                   <p className="kicker-muted mt-1">
-                    Attorney &amp; Government Relations Counsel
+                    Principal — Government Relations
                   </p>
                 </div>
               </div>
@@ -82,39 +82,47 @@ export default function About() {
           >
             <div className="space-y-6 text-lg leading-relaxed text-foreground-2">
               <p className="dropcap">
-                My career at the Connecticut Capitol began in 1998 as a staffer
-                for the Legislature's Judiciary Committee. That foundational
-                experience instilled a deep, procedural understanding of how
-                laws are drafted, debated, and enacted in Hartford.
+                My work at the Connecticut Capitol began in 1998, on the
+                staff of the General Assembly's Judiciary Committee. I
+                learned the building from the inside — how bills are really
+                drafted, negotiated, traded, and killed, and who you have
+                to know and trust to move them.
               </p>
               <p>
-                For more than two decades, I served as a key figure at Gaffney,
-                Bennett &amp; Associates and the Law Offices of Jay F.
-                Malcynsky, P.C., representing a vast roster of corporate and
-                institutional clients. Now, as an independent practitioner, I
-                offer clients a distinct advantage: the strategic depth of a
-                large-firm veteran, delivered with the agility and direct
-                access of a solo practice.
+                In the two decades since, I built a practice for corporate
+                and institutional clients at a leading Connecticut
+                government relations firm, and built something harder to
+                replicate alongside it: standing relationships across the
+                aisle, with legislators and agency staff who know my word
+                holds. At the Capitol, most people just know me as Zeke.
+                That familiarity is the work of 25 years, and it's the
+                first thing a client is really hiring.
               </p>
               <p>
-                I am not just a government relations professional — I am
-                an attorney admitted to practice before the United States
-                Supreme Court. My commitment to the legal profession extends
-                to my leadership roles, having served as{" "}
+                The second thing is rarer. I'm an attorney — admitted in
+                Connecticut and Massachusetts and before the United States
+                Supreme Court — and I've served the profession as{" "}
                 <span className="text-foreground">
                   Secretary of the Connecticut Bar Association
                 </span>{" "}
-                and as a Board member of{" "}
+                and as a director of{" "}
                 <span className="text-foreground">
                   Connecticut Lawyers Concerned for Lawyers
                 </span>
-                .
+                . It means the person managing your relationships in
+                Hartford is the same person who can draft the statutory
+                language and read a bill the way the people enforcing it
+                will.
+              </p>
+              <p>
+                Most lobbyists offer one or the other. I'd argue the
+                combination is the whole point.
               </p>
               <p className="font-display italic text-2xl text-foreground leading-snug pt-4 border-t border-border mt-8">
-                "This unique combination of legislative mastery and
-                elite legal credentials ensures that my clients receive
-                advocacy that is not only politically astute but legally
-                unassailable."
+                "Legislative judgment and legal rigor, in the same person.
+                That combination makes advocacy both politically realistic
+                and legally sound — long before anyone else is reading the
+                fine print."
               </p>
             </div>
           </div>

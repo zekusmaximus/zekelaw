@@ -12,8 +12,8 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 const HERO_IMAGE =
   "https://d2xsxph8kpxj0f.cloudfront.net/120221426/MLsbjyUgrfc9mwnDpd5w8d/hero-capitol-dusk-8gbAPivaDp67KXrgyuB374.png";
 
-const headlineLine1 = ["Elite", "Government", "Relations."];
-const headlineLine2 = ["Unassailable", "Legal", "Authority."];
+const headlineLine1 = ["In", "Hartford,", "the", "relationships", "come", "first."];
+const headlineLine2 = ["I've", "spent", "25", "years", "earning", "them."];
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
@@ -65,7 +65,7 @@ export default function Hero() {
             >
               <span className="gold-rule" />
               <span className="kicker">
-                Government Relations &amp; Administrative Law — West Hartford, CT
+                Government Relations — West Hartford, CT
               </span>
             </div>
 
@@ -131,10 +131,14 @@ export default function Hero() {
                 transform: mounted ? "translate3d(0,0,0)" : "translate3d(0,16px,0)",
               }}
             >
-              Navigating the intersection of law, regulation, and public
-              policy in Connecticut — representing established
-              corporations, trade associations, and highly regulated
-              industries before the General Assembly and Executive Branch.
+              I've worked the Connecticut Capitol since 1998 — long enough
+              that the relationships I rely on were built across both
+              parties, in the Legislature and the agencies, the slow way:
+              through trust earned session after session, not access rented
+              for a single one. What I build on it sets me apart: I'm also
+              the attorney who drafts the bill, the amendment, and the
+              testimony myself — so you get the access and the precision in
+              one person, working your matter directly.
             </p>
 
             {/* CTA row */}
@@ -148,35 +152,15 @@ export default function Hero() {
               }}
             >
               <a href="#contact" className="btn-gold">
-                Schedule a Confidential Consultation
+                Start a Confidential Conversation
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a href="#about" className="btn-ghost">
-                The Practice
+                About the Practice
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Bottom-right metadata block — admissions */}
-      <div
-        className="hidden lg:block absolute right-10 bottom-24 z-10 transition-all duration-1000"
-        style={{
-          transitionDelay: "1300ms",
-          transitionTimingFunction: "var(--ease-out-cinematic)",
-          opacity: mounted ? 1 : 0,
-          transform: mounted ? "translate3d(0,0,0)" : "translate3d(0,16px,0)",
-        }}
-      >
-        <div className="border-l border-gold pl-5 py-2 max-w-[300px]">
-          <p className="kicker-muted mb-3">Admitted</p>
-          <ul className="font-display text-base leading-snug text-foreground space-y-1">
-            <li>Connecticut</li>
-            <li>Massachusetts</li>
-            <li>U.S. Supreme Court</li>
-          </ul>
         </div>
       </div>
 

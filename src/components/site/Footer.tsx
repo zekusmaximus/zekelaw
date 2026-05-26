@@ -25,16 +25,16 @@ export default function Footer() {
               </div>
               <div>
                 <p className="font-display text-lg text-foreground leading-tight">
-                  Law Offices of Jeffrey Zyjeski
+                  [FIRM NAME]
                 </p>
-                <p className="kicker-muted mt-1">Attorney &amp; GR Counsel</p>
+                <p className="kicker-muted mt-1">Government Relations — Hartford, CT</p>
               </div>
             </div>
             <p className="text-sm text-muted-foreground max-w-md leading-relaxed">
-              Independent government relations and administrative law counsel
-              for established corporations, trade associations, and highly
-              regulated industries before the Connecticut General Assembly
-              and Executive Branch.
+              Independent government relations for corporations, trade
+              associations, and regulated industries before the Connecticut
+              General Assembly and the executive branch — led by a Capitol
+              veteran who is also the attorney drafting the language.
             </p>
           </div>
 
@@ -96,14 +96,11 @@ export default function Footer() {
         {/* Disclaimer + copyright */}
         <div className="border-t border-border py-8 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
           <p className="text-xs text-muted-foreground max-w-3xl leading-relaxed">
-            © {year} The Law Offices of Jeffrey Zyjeski. Attorney
-            advertising. The information on this website is for general
-            informational purposes only. Nothing on this site should be taken
-            as legal advice for any individual case or situation. The receipt
-            of, or access to, this information does not create an
-            attorney-client relationship.
+            © {year} [FIRM NAME]. [FIRM NAME] is a government relations and
+            lobbying practice. It does not provide legal services, legal
+            advice, or legal representation.
           </p>
-          <p className="kicker-muted shrink-0">West Hartford · Est. 1998</p>
+          <p className="kicker-muted shrink-0">West Hartford · At the Capitol since 1998</p>
         </div>
       </div>
     </footer>

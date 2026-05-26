@@ -1,6 +1,6 @@
 /**
  * Credentials — bar admissions, leadership roles, and committee specialties.
- * Editorial timeline-style layout. Reinforces the "unassailable legal authority" claim.
+ * Editorial timeline-style layout. Reinforces the credential and committee depth.
  */
 import { useReveal } from "@/hooks/useReveal";
 import { GraduationCap, Scale, Users, Gavel } from "lucide-react";
@@ -19,7 +19,7 @@ const pillars: Pillar[] = [
   {
     icon: Scale,
     label: "Bar Admissions",
-    title: "Authority to Practice",
+    title: "Principal admitted in…",
     items: [
       "State of Connecticut",
       "Commonwealth of Massachusetts",
@@ -32,7 +32,7 @@ const pillars: Pillar[] = [
     title: "Profession & Community",
     items: [
       "Secretary, Connecticut Bar Association",
-      "Board Member, CT Lawyers Concerned for Lawyers",
+      "Director, CT Lawyers Concerned for Lawyers",
       "Member, Connecticut Association of Lobbyists",
     ],
   },
@@ -43,7 +43,7 @@ const pillars: Pillar[] = [
     items: [
       "Judiciary & General Law Committees",
       "Appropriations & Transportation Committees",
-      "Administrative rulemaking & hearings",
+      "Agency rulemaking & regulatory monitoring",
     ],
   },
   {
@@ -51,9 +51,9 @@ const pillars: Pillar[] = [
     label: "Foundation",
     title: "Capitol Experience",
     items: [
-      "Staffer, CT Legislature Judiciary Committee (1998)",
-      "Two decades at Gaffney, Bennett & Associates",
-      "Law Offices of Jay F. Malcynsky, P.C.",
+      "Staff, CT General Assembly Judiciary Committee (1998)",
+      "Two decades at a leading Connecticut government relations firm",
+      "Bipartisan relationships across the Legislature and agencies",
     ],
   },
 ];
@@ -90,7 +90,7 @@ export default function Credentials() {
             <span className="kicker-muted">Credentials</span>
           </div>
           <h2 className="display-xl italic text-gold">
-            Politically astute. Legally unassailable.
+            Bipartisan relationships. Statutory craft.
           </h2>
         </div>
 

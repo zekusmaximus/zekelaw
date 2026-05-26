@@ -40,7 +40,7 @@ export default function Header() {
           <a
             href="#top"
             className="flex items-center gap-3 group"
-            aria-label="Law Offices of Jeffrey Zyjeski"
+            aria-label="[FIRM NAME]"
           >
             <div className="relative w-10 h-10 lg:w-11 lg:h-11 flex items-center justify-center border border-gold transition-colors duration-300 group-hover:bg-gold">
               <span
@@ -52,10 +52,10 @@ export default function Header() {
             </div>
             <div className="hidden sm:flex flex-col leading-tight">
               <span className="font-display text-base lg:text-lg tracking-tight">
-                Jeffrey Zyjeski
+                [FIRM NAME]
               </span>
               <span className="kicker-muted" style={{ marginTop: 2 }}>
-                Attorney — Counsel
+                Government Relations — Hartford, CT
               </span>
             </div>
           </a>
@@ -83,7 +83,7 @@ export default function Header() {
               <span className="font-mono tracking-wider">(860) 690-9273</span>
             </a>
             <a href="#contact" className="btn-gold btn-gold--sm">
-              Consult
+              Contact
               <span aria-hidden="true">→</span>
             </a>
           </div>
@@ -133,7 +133,7 @@ export default function Header() {
               onClick={() => setMobileOpen(false)}
               className="btn-gold justify-center"
             >
-              Schedule Consultation
+              Start a Conversation
               <span aria-hidden="true">→</span>
             </a>
           </div>

@@ -37,37 +37,34 @@ export default function Introduction() {
             style={{ transitionDelay: "120ms" }}
           >
             <p className="display-xl text-foreground max-w-4xl">
-              When high-stakes regulatory scrutiny and legislative challenges
-              threaten your organization's objectives, you need more than
-              a traditional lobbyist
+              Relationships earned over 25 years
               <span className="text-gold italic">&nbsp;—&nbsp;</span>
-              you need a seasoned legal strategist.
+              and a lawyer who drafts the bill himself.
             </p>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl">
               <p className="text-lg leading-relaxed text-foreground-2">
-                The Law Offices of Jeffrey "Zeke" Zyjeski offers
-                independent, elite government relations and administrative law
-                counsel. After more than two decades as a key figure at one of
-                Connecticut's most prominent legacy firms, Zeke brings the
-                institutional knowledge of a Capitol heavyweight combined with
-                the un-conflicted, focused attention of a solo practitioner.
+                I've worked the Connecticut Capitol since 1998. The
+                relationships I rely on were built across both parties, in
+                the Legislature and the agencies, the slow way: through
+                trust earned session after session, not access rented for a
+                single one. That's the foundation of everything I do for
+                clients.
               </p>
               <p className="text-lg leading-relaxed text-foreground-2">
-                Grounded in high-level legal authority — including
-                admission to practice before the United States Supreme Court
-                — we deliver direct, partner-level advocacy for
-                established corporations, trade associations, and highly
-                regulated industries in the Connecticut General Assembly and
-                Executive Branch.
+                What I build on it sets me apart: I'm also the attorney who
+                drafts the bill, the amendment, and the testimony myself.
+                Clients get the access and the precision — a strategy
+                that's sound the moment it's written, not after outside
+                counsel weighs in a week later.
               </p>
             </div>
 
             {/* Marginalia row — three small data points */}
             <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-6 max-w-3xl">
-              <Stat label="Practicing Since" value="1998" />
+              <Stat label="At the Capitol Since" value="1998" />
               <Stat label="Capitol Relationships" value="Bipartisan" />
-              <Stat label="Engagement Model" value="Partner-Direct" />
+              <Stat label="Engagement Model" value="Principal-Direct" />
             </div>
           </div>
         </div>
