@@ -96,12 +96,9 @@ export default function Footer() {
         {/* Disclaimer + copyright */}
         <div className="border-t border-border py-8 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
           <p className="text-xs text-muted-foreground max-w-3xl leading-relaxed">
-            © {year} [FIRM NAME]. Attorney advertising. This site
-            describes a government relations practice; it does not offer
-            legal services or legal representation, and nothing on it is
-            legal advice. The principal is an attorney admitted in
-            Connecticut. Use of this site does not create an attorney-client
-            relationship.
+            © {year} [FIRM NAME]. [FIRM NAME] is a government relations and
+            lobbying practice. It does not provide legal services, legal
+            advice, or legal representation.
           </p>
           <p className="kicker-muted shrink-0">West Hartford · At the Capitol since 1998</p>
         </div>

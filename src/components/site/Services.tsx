@@ -139,11 +139,6 @@ export default function Services() {
               <IndustryCard key={i.title} {...i} delay={idx * 80} />
             ))}
           </div>
-
-          <p className="mt-12 text-sm text-muted-foreground italic max-w-2xl font-display">
-            Adjacent matters considered case by case. If your issue touches
-            Hartford, it's worth a conversation.
-          </p>
         </div>
 
         {/* Bottom CTA */}

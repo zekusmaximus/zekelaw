@@ -100,8 +100,8 @@ export default function About() {
               </p>
               <p>
                 The second thing is rarer. I'm an attorney — admitted in
-                Connecticut and before the United States Supreme Court —
-                and I've served the profession as{" "}
+                Connecticut and Massachusetts and before the United States
+                Supreme Court — and I've served the profession as{" "}
                 <span className="text-foreground">
                   Secretary of the Connecticut Bar Association
                 </span>{" "}

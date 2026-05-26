@@ -164,26 +164,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom-right metadata block — admissions */}
-      <div
-        className="hidden lg:block absolute right-10 bottom-24 z-10 transition-all duration-1000"
-        style={{
-          transitionDelay: "1300ms",
-          transitionTimingFunction: "var(--ease-out-cinematic)",
-          opacity: mounted ? 1 : 0,
-          transform: mounted ? "translate3d(0,0,0)" : "translate3d(0,16px,0)",
-        }}
-      >
-        <div className="border-l border-gold pl-5 py-2 max-w-[300px]">
-          <p className="kicker-muted mb-3">Admitted</p>
-          <ul className="font-display text-base leading-snug text-foreground space-y-1">
-            <li>Connecticut</li>
-            <li>Massachusetts</li>
-            <li>U.S. Supreme Court</li>
-          </ul>
-        </div>
-      </div>
-
       {/* Scroll indicator */}
       <div
         className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-opacity duration-1000"

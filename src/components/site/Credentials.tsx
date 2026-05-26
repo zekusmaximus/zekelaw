@@ -19,7 +19,7 @@ const pillars: Pillar[] = [
   {
     icon: Scale,
     label: "Bar Admissions",
-    title: "Authority to Practice",
+    title: "Principal admitted in…",
     items: [
       "State of Connecticut",
       "Commonwealth of Massachusetts",

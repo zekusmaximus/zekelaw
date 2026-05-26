@@ -1,6 +1,7 @@
 /**
  * Contact — confidential inquiry form + direct contact info.
- * Architectural marble/brass background image evokes Supreme Court authority.
+ * Background reuses the Capitol-at-dusk image to keep the section on the
+ * legislative-building theme.
  * Form submission opens user's email client with a pre-populated message
  * (no backend; web-static project).
  */
@@ -17,7 +18,7 @@ import {
 } from "@/components/ui/select";
 
 const BG =
-  "https://d2xsxph8kpxj0f.cloudfront.net/120221426/MLsbjyUgrfc9mwnDpd5w8d/cta-bg-courthouse-67AcKAbup7EvmBbmX5Y5pc.webp";
+  "https://d2xsxph8kpxj0f.cloudfront.net/120221426/MLsbjyUgrfc9mwnDpd5w8d/hero-capitol-dusk-8gbAPivaDp67KXrgyuB374.png";
 
 export default function Contact() {
   const { ref: rH, isVisible: vH } = useReveal<HTMLDivElement>();
@@ -176,9 +177,8 @@ export default function Contact() {
 
               <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-6 justify-between">
                 <p className="text-xs text-muted-foreground max-w-xs leading-relaxed">
-                  Sending this inquiry does not create an engagement or an
-                  attorney-client relationship. Any engagement begins only
-                  upon a signed written agreement.
+                  Sending this inquiry does not create an engagement. Any
+                  engagement begins only on a signed written agreement.
                 </p>
                 <button type="submit" className="btn-gold shrink-0">
                   Send Inquiry
