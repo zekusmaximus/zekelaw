@@ -135,10 +135,12 @@ export default function Hero() {
               that the relationships I rely on were built across both
               parties, in the Legislature and the agencies, the slow way:
               through trust earned session after session, not access rented
-              for a single one. What I build on it sets me apart: I'm also
-              the attorney who drafts the bill, the amendment, and the
-              testimony myself — so you get the access and the precision in
-              one person, working your matter directly.
+              for a single one. What sets me apart is that I'm also a
+              lawyer. I draft the language we put forward, negotiate the
+              amendments that decide what a bill actually does, write the
+              testimony, and read every proposal the way the agency that
+              will enforce it does. You get the relationships and the legal
+              precision in one person, working your matter directly.
             </p>
 
             {/* CTA row */}

@@ -34,7 +34,7 @@ const primary: PrimaryService[] = [
     title: "Direct Legislative Advocacy",
     body: "The Connecticut General Assembly is a complex ecosystem. I provide sophisticated legislative strategy, from drafting statutory language and building committee alliances to neutralizing adverse legislation before it gains momentum.",
     bullets: [
-      "Statutory drafting and amendment strategy",
+      "Proposed statutory and amendment language",
       "Committee testimony and coalition building",
       "Particular depth before the Judiciary and Transportation Committees",
     ],
@@ -116,8 +116,8 @@ export default function Services() {
             I work where the law meets public policy in Connecticut.
             Because clients work directly with me — not a team, not a
             handoff — the work is characterized by personal stewardship,
-            sound strategy, and the precision of statutory language
-            written by the lawyer who's also at the table.
+            sound strategy, and the precision of proposed language
+            drafted by the lawyer who's also at the table.
           </p>
         </div>
 
