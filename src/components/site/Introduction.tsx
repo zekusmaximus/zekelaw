@@ -39,7 +39,7 @@ export default function Introduction() {
             <p className="display-xl text-foreground max-w-4xl">
               Relationships earned over 25 years
               <span className="text-gold italic">&nbsp;—&nbsp;</span>
-              and a lawyer who drafts the bill himself.
+              and a lawyer who works the language, not just the room.
             </p>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl">
@@ -52,11 +52,12 @@ export default function Introduction() {
                 clients.
               </p>
               <p className="text-lg leading-relaxed text-foreground-2">
-                What I build on it sets me apart: I'm also the attorney who
-                drafts the bill, the amendment, and the testimony myself.
-                Clients get the access and the precision — a strategy
-                that's sound the moment it's written, not after outside
-                counsel weighs in a week later.
+                What sets me apart is that I'm also a lawyer. I draft the
+                proposed language and the amendments, write the testimony,
+                and read every bill the way the agency that will enforce it
+                does. Clients get the relationships and the legal precision
+                in one person — not a strategy handed off to outside counsel
+                a week later.
               </p>
             </div>
 

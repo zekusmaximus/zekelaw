@@ -110,9 +110,9 @@ export default function About() {
                   Connecticut Lawyers Concerned for Lawyers
                 </span>
                 . It means the person managing your relationships in
-                Hartford is the same person who can draft the statutory
-                language and read a bill the way the people enforcing it
-                will.
+                Hartford is the same person who can draft the language you put
+                forward, negotiate the amendments, and read a bill the way
+                the people who'll enforce it do.
               </p>
               <p>
                 Most lobbyists offer one or the other. I'd argue the
